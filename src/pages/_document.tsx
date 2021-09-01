@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-document-import-in-page */
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
@@ -10,6 +11,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="favicon.png" type="image/png" />
         </Head>
         <body>
           <Main />
