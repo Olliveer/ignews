@@ -74,5 +74,6 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   return {
     props: { post },
+    redirect: 60 * 30, // 30 minutes
   };
 };
