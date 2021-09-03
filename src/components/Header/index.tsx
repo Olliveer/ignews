@@ -1,5 +1,5 @@
-import NextLink from "next/link";
 import Image from "next/image";
+import { AcitiveLink } from "../ActiveLink";
 import { SignInButton } from "../SignInButton";
 import styles from "./styles.module.scss";
 
@@ -10,15 +10,13 @@ export function Header() {
         <Image width="110" height="31" src="/images/logo.svg" alt="ig.news" />
 
         <nav>
-          <NextLink href="/">
-            <a className={styles.active} href="#">
-              Home
-            </a>
-          </NextLink>
+          <AcitiveLink activeClassName={styles.active} href="/">
+            <a>Home</a>
+          </AcitiveLink>
 
-          <NextLink href="/posts">
-            <a href="#">Posts</a>
-          </NextLink>
+          <AcitiveLink activeClassName={styles.active} href="/posts" prefetch>
+            <a>Posts</a>
+          </AcitiveLink>
         </nav>
         <SignInButton />
       </div>
